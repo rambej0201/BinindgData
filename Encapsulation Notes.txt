@@ -1,0 +1,84 @@
+Encapsulation: The process of binding data as a single unit is called encapsulation. The process of binding code & data is called encapsulation.
+
+* 
+
+Java class has encapsulation mechanism and Java package has encapsulation mechanism. Class binds properties & behaviour as a single unit of the class like variable, method, constructor. Package binds group of classes and interfaces as a single unit.
+
+Java Beans Concept: It contains private properties and public setter and getter methods. It is used to transfer the data between two layers. Setters & getters are reuseable components and user defined methods.
+
+It contains private properties and public setter and getter methods. Setters purpose is to set the data to properties. Getters purpose is to get the data from properties. Java Beans class also called as Value Object / Business Object / Data Transform Object. 
+
+/* Java Beans class example
+
+class EnOne{
+	//declare the instance variables
+	private int eid;
+	private String ename;
+
+	//Setters are used to set the values to properties 
+	public void setEid(int eid){
+	this.eid = eid;
+}
+	public void setEname(int ename){
+	this.ename = ename;
+}
+	//getters are used to get the values from properties
+	public int getEid(){
+	return eid;
+}
+	public String getEname(){
+	return ename;
+}
+}
+
+*/
+
+
+//implementing the values to object in another class
+/*
+class EnTwo{
+	public static void main(String[] argv){
+		EnOne e1 = new EnOne();
+		//setters are used to set the data
+		e1.setEid(45);
+		e1.setEname("Ram");
+		
+		//getters are used to get the data
+		int eid = e1.getEid();
+		System.out.println(eid);
+		String ename = e1.getEname();
+		System.out.println(ename);
+		
+		System.out.println("//second object");
+		//second object
+		EnOne e2 = new EnOne();
+		e2.setEid(85);
+		e2.setEname("Sam");
+		System.out.println(e2.getEid());
+		System.out.println(e2.getEname());
+	}
+}
+*/
+
+----------------------------------------------------------------------------------------------------
+Important classes
+
+1. Class: The class contains normal methods also known as concret
+2. Abstract Class: Abstract class may or may not contain abstract method but object creation in abstract class is not possible. To prevent the object creation declare the class with abstract modifier.
+3. Parent Class: The class which provides properties to child(other) classes is called parent class.
+4. Child class: The class which acquires properties from parent class is called child class.
+5. Java Beans class: It contains private properties, public setters & getter methods
+6. Adopter class: The adopter class contains empty implementations of all interface methods as it gets implemented from the interface. Extend the adopter class to child class and override required methods in child class.
+7. Public class: Declaring class name & source file name must me same. Public class is accessable by all packages without any limitations.
+8. Default class: It is accessable within package
+9. Tightly encapsulated class: The class containts private properties called tightly encapsulated class.
+10. Implementation class: The class implements a specific interface is called implementation class.
+11. Final class: Class declared with final modifier is called final class. We can not extend the final class. Final class prevent the inheritance concept.
+12. Immutable class: The class object does not allow any modifications to existed objects. Once we declare String object it is not possible to modify existing object such behaviour is called immutable class. All wrapper classes in java are immutable class.
+13. Mutable class: Once we declare StringBuffer object it is possible to modify existing object. Such behaviour is called mutable class.
+14. Strictfp class: If a class declared Strictfp, that specific class all methods follows the floating point calculation standards are iEEE754 standards
+15. Singleton Class: The class which allows to create the only single object is called Singleton Class.
+
+
+
+
